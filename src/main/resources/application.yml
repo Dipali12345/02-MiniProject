@@ -1,0 +1,31 @@
+server:
+  port: 9092
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    username: system
+    password: manager
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    properties:
+      hibernate:
+        shoow-sql: true
+        formate-sql: true
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: gmail.smtp.com
+    port: 587
+    username: dipalicthakre@gmail.com
+    password: Dipali1@
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+app:
+  messages:
+    invalidCredentials: Credentials are invalid
+    accountLock: your account is lock
+    regSuccess: Registration almost completed .Please check your Email to process
